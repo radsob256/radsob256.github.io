@@ -4,6 +4,9 @@
     margin: 0;
     background-color: white;
     font-family: 'Open Sans', sans-serif;
+    align-items: stretch;
+    height: 100vh;
+    overflow: hidden;
 }
 * {
     box-sizing: inherit;
@@ -12,40 +15,77 @@
     color: #4c404d;
     font-weight: 700;
     font-size: 1.75em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 .section-header {
     color: #4c404d;
     font-weight: 700;
-    font-size: 1.25em;
+    font-size: 1.5em;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+.article {
+    padding-left: 20px;
 }
 .article-header {
     color: #4c404d;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 1em;
+    font-size: 1.25em;
 }
 .content-wrapper {
-    padding: 10px; 
+    overflow: auto;
+    padding: 20px; 
 }
 .navigation {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background: #f8f7f8;
-    height: 100vh;
+    min-height: 100vh;
     padding: 10px;
     color: #4c404d;
+    flex-basis: 350px;
+    flex-shrink: 0;
 }
 .description {
     color: #898889;
     font-size: 0.9em;
-    line-height: 1.75;
+    line-height: 2;
 }
 .copyright {
     font-size: 0.75em;
     color: #4c404d;
     text-align: center;
+}
+.school-wrapper.active .school-description {
+    height: 100px;
+}
+
+/*
+.school-wrapper:hover .school-description {
+    height: 100px;
+}
+*/
+.school-header {
+    color: #4c404d;
+    font-weight: 700;
+    font-size: 0.75em;
+    background-color: #f8f7f8;
+    cursor: pointer;
+    padding: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #4c404d;
+}
+.school-description {
+    height: 0;
+    overflow: hidden;
+    color: #898889;
+    font-size: 0.9em;
+    line-height: 2;
+    transition: all 0.5s ease-in-out;
 }

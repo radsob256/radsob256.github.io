@@ -1,6 +1,8 @@
+html {
+    box-sizing: border-box;
+}
 .wrapper {
     display: flex;
-    box-sizing: border-box;
     margin: 0;
     overflow: hidden;
     background-color: #eeeeee;
@@ -15,6 +17,12 @@
     flex-shrink: 0;
     min-height: 100vh;
     padding: 20px 10px 40px 30px;
+}
+.navigation a:link, a:visited {
+    text-decoration: none;
+    color: #363636;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
 }
 .navigation-section {
     margin-top: 10px;
@@ -45,6 +53,7 @@
     list-style-type: none;
     list-style-position: inside;
     padding-left: 0;
+    margin-top: 0;
 }
 .navigation-menu-header {
     font-size: 1em;
@@ -120,7 +129,9 @@
     line-height: 28px;
 }
 .school-wrapper.active .school-description {
-    height: 50px;
+    height: auto;
+    max-height: 1000px;
+    transition: all 0.5s ease-in;
 }
 .school-header {
     font-size: 0.85em;
@@ -135,9 +146,9 @@
     margin-bottom: 0px;
 }
 .school-description {
-    height: 0;
+    max-height: 0;
     overflow: hidden;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-out;
     font-size: 0.85em;
     font-weight: 100;
     color: #363636;
@@ -194,4 +205,16 @@
     font-family: 'Roboto', sans-serif;
     text-align: justify;
     margin-bottom: 20px;
+}
+.swiper-slide {
+    height: 500px;
+    background-color: #eeeeee;
+}
+.slide-wrapper {
+    padding: 0px;
+}
+.slide-photo {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }

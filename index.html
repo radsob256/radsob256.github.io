@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CV - Radosław Sobieralski</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" type="text/css" href="normalize.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700&display=swap" rel="stylesheet">
@@ -20,18 +22,18 @@
             </h1>
             <ul class="navigation-menu-wrapper">
                 <li class="navigation-menu-header">O mnie</li>
-                <li class="navigation-menu-item">Opis</li>
-                <li class="navigation-menu-item">Zainteresowania</li>
-                <li class="navigation-menu-header">Kariera</a></li>
-                <li class="navigation-menu-item">Nauka</li>
-                <li class="navigation-menu-item">Praca</li>
-                <li class="navigation-menu-item">Osiągnięcia</li>
-                <li class="navigation-menu-item">Projekty</li>
-                <li class="navigation-menu-header">Kontakt</a></li>
+                <li class="navigation-menu-item" data-name="description">Opis</li>
+                <li class="navigation-menu-item" data-name="interests">Zainteresowania</li>
+                <li class="navigation-menu-header">Kariera</li>
+                <li class="navigation-menu-item" data-name="school">Nauka</li>
+                <li class="navigation-menu-item" data-name="work">Praca</li>
+                <li class="navigation-menu-item" data-name="achievement">Osiągnięcia</li>
+                <li class="navigation-menu-item" data-name="projects">Projekty</li>
+                <li class="navigation-menu-header">Kontakt</li>
             </ul>
             <div class="social">
-                <a href="" class="social"><i class="fab fa-github fa-2x"></i></a>
-                <a href="" class="social"><i class="fab fa-facebook fa-2x"></i></a>   
+                <i class="fab fa-github fa-2x social"></i>
+                <i class="fab fa-facebook fa-2x social"></i>   
             </div>
             <p class="copyright">
                 &copy; Copyright 2019
@@ -39,18 +41,44 @@
         </section>
     </nav>
     <main class="content-wrapper">
+        <section>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide-wrapper">
+                            <img src="https://picsum.photos/id/237/1020/500?grayscale" class="slide-photo" />
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-wrapper">
+                        <img src="https://picsum.photos/1020/500?random=2&grayscale" class="slide-photo" />
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-wrapper">
+                        <img src="https://picsum.photos/1020/500?random=3&grayscale" class="slide-photo" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
         <section class="section-wrapper">
             <h2 class="section-header">
                 O mnie
             </h2>
             <article class="article">
-                <h3 class="article-header" id="header-opis">Opis</h3>
+                <h3 class="article-header" id="description">Opis</h3>
                 <p class="description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto natus quam maiores quisquam nesciunt odio delectus dolorum, tenetur culpa dicta cum assumenda ipsum molestiae commodi totam placeat magnam odit reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto natus quam maiores quisquam nesciunt odio delectus dolorum, tenetur culpa dicta cum assumenda ipsum molestiae commodi totam placeat magnam odit reiciendis.
                 </p>
             </article>
             <article class="article">
-                <h3 class="article-header" id="header-zainteresowania">Zainteresowania</h3>
+                <h3 class="article-header" id="interests">Zainteresowania</h3>
                 <ul class="description">
                     <li>Lorem ipsum </li>
                     <li>Lorem ipsum </li>
@@ -63,7 +91,7 @@
                 Kariera
             </h2>
             <article class="article">
-                <h3 class="article-header" id="header-nauka">Nauka</h3>
+                <h3 class="article-header" id="school">Nauka</h3>
                 <div class="school-wrapper">
                     <h4 class="school-header">Lorem ipsum dolor sit amet</h4>
                     <p class="school-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur necessitatibus pariatur consequatur, quae ab sed veritatis vel nemo a eius labore modi sint ipsam dolor. Harum saepe eveniet accusamus fugiat.</p>
@@ -78,7 +106,7 @@
                 </div>
             </article>
             <article class="article">
-                <h3 class="article-header" id="header-praca">Praca</h3>
+                <h3 class="article-header" id="work">Praca</h3>
                 <div class="school-wrapper">
                     <h4 class="school-header">Lorem ipsum dolor sit amet</h4>
                     <p class="school-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur necessitatibus pariatur consequatur, quae ab sed veritatis vel nemo a eius labore modi sint ipsam dolor. Harum saepe eveniet accusamus fugiat.</p>
@@ -93,7 +121,7 @@
                 </div>
             </article>
             <article class="article">
-                <h3 class="article-header" id="header-osiagniecia">Osiągnięcia</h3>
+                <h3 class="article-header" id="achievement">Osiągnięcia</h3>
                 <div class="article-row">
                     <div class="article-box">
                         <h4 class="article-box-header">Lorem ipsum</h4>
@@ -125,7 +153,7 @@
                 </div>
             </article>
             <article class="article">
-                <h3 class="article-header" id="header-projekty">Projekty</h3>
+                <h3 class="article-header" id="projects">Projekty</h3>
             </article>
         </section>
         <section class="section-wrapper">
